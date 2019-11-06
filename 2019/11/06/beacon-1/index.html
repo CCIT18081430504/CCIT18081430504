@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>beacon | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="һ.����������������е�help��ѡ��Manage embedded software packages,����STM32F4��1.24.1�汾�Ĺ̼�����Ȼ��ѡ��STMicroelectronics,����X_CUBE_BLE1��4.4.0�汾�Ĺ̼�����X_CUBE_MEMS1��6.2.0�̼�������.���New projiet ����оƬѡ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="beacon">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;beacon-1&#x2F;index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="һ.����������������е�help��ѡ��Manage embedded software packages,����STM32F4��1.24.1�汾�Ĺ̼�����Ȼ��ѡ��STMicroelectronics,����X_CUBE_BLE1��4.4.0�汾�Ĺ̼�����X_CUBE_MEMS1��6.2.0�̼�������.���New projiet ����оƬѡ">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-06T12:06:22.474Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-beacon-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/06/beacon-1/" class="article-date">
+  <time datetime="2019-11-06T12:05:52.000Z" itemprop="datePublished">2019-11-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      beacon
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>һ.������<br>����������е�help��ѡ��Manage embedded software packages,����STM32F4��1.24.1�汾�Ĺ̼�����Ȼ��ѡ��STMicroelectronics,����X_CUBE_BLE1��4.4.0�汾�Ĺ̼�����X_CUBE_MEMS1��6.2.0�̼�����<br>��.���New projiet ����оƬѡ��ҳ��<br>������ѡ�����STM32F401RETx(��Ϊ�ҵ�оƬ��������ͺţ���ҿ��Ը����Լ�оƬ���ͺŽ���ѡ��)<br>��.ѡ��оƬ����빤������<br>1.��Additional Software�е�STMicorelectronics.X_CUBE_BLE1�ֱ�չ�����ص��ļ���Application��ѡ��Beacon,HCI_TLѡ��Basic,HCI_TL_INTERFACEѡ��UserBoard��ͼƬ����<br>2.��System Core������SWD����ģʽ��ѡ��SYS,Debug��ѡ��Serial Wire��<br>3.��Connectivity������ȫ˫��ģʽ�ʹ��ڵ��첽ģʽ����SPI1��Mode��ѡ��Full_Duplex Master(ȫ˫��ģʽ)���������Parameter Settings����ʱ�Ӳ�������Clock Parameters������ Prescaler��Ԥ��Ƶ����Ϊ4��ѡ��USART1,Mode��ѡ��Asynchronous(�첽ģʽ)<br>4.���Additional Software �·���X_CUBE_BLE1.4.4.0, Ȼ���Wireless BlueNRG_MS�� Wireless Application����ѡ�ϡ�Ȼ����Platform Settings�·�����������ã�����ԭ��ͼ�� PC4����Ϊ�ⲿ�ж����ţ�����Exti Line��ѡ��PC4����������SPI1�����õ�ȫ˫��ģʽ������BUS IO driver��ѡ�����SPI1;����PA4��PB1ΪGPIO_Output,����CS Line ��ѡ��PA4,Reset Linez ��ѡ��PB1����BSP USART��ѡ��USART1��<br>5.ѡ��оƬ�Ϸ���System view,Ȼ��ѡ��GPIO,�����ķ�����ѡ��NVIC��EXTI line4 interrruput ��ѡ�ϡ�<br>��.����˵����е�Project Manager���빤������<br>�����ù������ƺ�ѡ��ù��̴洢·���Ϳ��Ե��GENERATE CODE���ɹ����ˡ�������ǿ��һ�¹������� ���̴洢·������ö���Ӣ�Ĳ�Ҫ�������ģ���Ȼ���׳��������빤�̺�����������¿����Ƿ����������������棬����ǵ�˵�����̽����ɹ���</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/06/beacon-1/" data-id="ck2n8lcv90000m4uhd98pggtq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/06/beacon/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">beacon</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/06/beacon-1/">beacon</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/beacon/">beacon</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">个人博客搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/text/">text</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/31/helloccit/">helloccit</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
